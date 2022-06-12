@@ -1,0 +1,117 @@
+set shiftwidth=4
+set autoindent
+set smartindent
+set relativenumber
+set colorcolumn=80
+set mouse=a
+set viminfofile=$XDG_CONFIG_HOME/vim/viminfo
+let g:netrw_dirhistmax = 0
+set runtimepath^=$XDG_CONFIG_HOME/vim
+set runtimepath+=$XDG_DATA_HOME/vim
+set runtimepath+=$XDG_CONFIG_HOME/vim/after
+
+set packpath^=$XDG_DATA_HOME/vim,$XDG_CONFIG_HOME/vim
+set packpath+=$XDG_CONFIG_HOME/vim/after,$XDG_DATA_HOME/vim/after
+
+let g:netrw_home = $XDG_DATA_HOME."/vim"
+call mkdir($XDG_DATA_HOME."/vim/spell", 'p')
+
+set backupdir=$XDG_STATE_HOME/vim/backup | call mkdir(&backupdir, 'p')
+set directory=$XDG_STATE_HOME/vim/swap   | call mkdir(&directory, 'p')
+set undodir=$XDG_STATE_HOME/vim/undo     | call mkdir(&undodir,   'p')
+set viewdir=$XDG_STATE_HOME/vim/view     | call mkdir(&viewdir,   'p')
+
+if !has('nvim') | set viminfofile=$XDG_STATE_HOME/vim/viminfo | endif
+
+
+if !has('nvim')
+    set ttymouse=xterm2
+endif
+
+if (empty($TMUX))
+    if (has("nvim"))
+    	let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+	let &viminfo .= '.nvim'
+    endif
+    if (has("termguicolors"))
+    	set termguicolors
+    endif
+endif
+
+call plug#begin()
+    " file navigation
+    Plug 'preservim/nerdtree'
+    " colorscheme
+    Plug 'morhetz/gruvbox'
+    " bar
+    Plug 'vim-airline/vim-airline'
+    " code completion
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'tpope/vim-fugitive'
+call plug#end()
+
+colorscheme gruvbox
+
+set showcmd
+let mapleader = " "
+
+" airline bar config
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+    let g:airline_extensions = []
+endif
+let g:airline#extensions#default#section_truncate_width = {
+    \'b': 80,
+    \'x': 60,
+    \'y': 80,
+    \'z': 40,
+    \'warning': 80,
+    \'error': 80,
+    \}
+
+let g:airline#extensions#default#layout = [
+    \ [ 'a', 'b', 'c' ],
+    \ [ 'x', 'y', 'z', 'error', 'warning' ]
+    \ ]
+
+let g:airline#extensions#nerdtree_statusline = 1
+
+let g:airline_powerline_fonts = 1
+
+"let g:airline_section_a = ''
+"let g:airline_section_b = ''
+"
+"let g:airline_section_c = ''
+
+"let g:airline_section_x = ''
+"let g:airline_section_y = ''
+"let g:airline_section_z = ''
+
+"let g:airline_section_warning = ''
+
+" keymap remap
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+nnoremap <leader>v <C-w>v
+nnoremap <leader>s <C-w>s
+nnoremap <leader>p :terminal<CR>
+
+let NERDTreeWinSize = 50
+nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+highlight Normal guibg=none
+highlight NonText guibg=none

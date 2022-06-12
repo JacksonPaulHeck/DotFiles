@@ -10,7 +10,6 @@ alias ls='exa -lha --color=auto'
 alias clear='clear && neofetch'
 alias cls='clear'
 alias startx='startx --config /home/jpheckles/.config/X11/xinitrc'
-alias jph='echo JPH'
 export HISTFILE="${XDG_STATE_HOME}"/bash/history
 export XINITRC="${XDG_CONFIG_HOME}"/X11/xinitrc
 export XAUTHORITY="${XDG_RUNTIME_DIR}"/Xauthority

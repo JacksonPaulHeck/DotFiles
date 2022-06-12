@@ -1,0 +1,12 @@
+.cache
+.cfg
+.config/BraveSoftware
+.config/coc
+.config/dconf
+.config/systemd
+.config/vim/plugged
+.local
+.pki
+.ssh
+Documents
+Downloads
