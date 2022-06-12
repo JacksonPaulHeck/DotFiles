@@ -3,6 +3,7 @@
 .config/BraveSoftware
 .config/coc
 .config/dconf
+.config/git
 .config/systemd
 .config/vim/plugged
 .local
