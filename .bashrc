@@ -17,6 +17,7 @@ export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GVIMINIT='let $MYGVIMRC="$XDG_CONFIG_HOME/vim/gvimrc" | source $MYGVIMRC'
 export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
+export STACK_ROOT="$XDG_DATA_HOME"/stack
 
 if [ ! -f $XAUTHORITY ]
 then
