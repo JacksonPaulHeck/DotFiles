@@ -201,7 +201,7 @@ screens = [
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
-        wallpaper = "~/Documents/astro.jpg",
+        wallpaper = "~/.local/share/wallpapers/astro.jpg",
         wallpaper_mode = "fill",
     ),
 ]

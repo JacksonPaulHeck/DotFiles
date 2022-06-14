@@ -8,7 +8,7 @@
 .config/vim/plugged
 .config/xmonad/xmonad
 .config/xmonad/xmonad-*
-.config/xmobar/
+.config/xmobar/xmobar
 .local
 .pki
 .ssh
