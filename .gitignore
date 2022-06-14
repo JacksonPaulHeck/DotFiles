@@ -6,6 +6,9 @@
 .config/git
 .config/systemd
 .config/vim/plugged
+.config/xmonad/xmonad
+.config/xmonad/xmonad-*
+.config/xmobar/
 .local
 .pki
 .ssh
