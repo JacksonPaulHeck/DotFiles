@@ -16,7 +16,7 @@ import Graphics.X11.ExtraTypes.XF86
 
 userMod 	= mod4Mask
 userTerminal 	= "alacritty"
-userBrowser 	= "brave-browser-nightly"
+userBrowser 	= "firefox-bin"
 userPrompt 	= "dmenu_run"
 
 userKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
