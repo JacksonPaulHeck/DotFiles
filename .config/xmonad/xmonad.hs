@@ -47,7 +47,7 @@ userLayout = tiled ||| Mirror tiled ||| Full
 
 userXmobarPP :: PP
 userXmobarPP = def {
-      ppSep             = yellow " • "
+      ppSep             = yellow "\xee\x82\xa0"
     , ppTitleSanitize   = xmobarStrip
     , ppCurrent         = wrap " " "" . xmobarBorder "Top" "#458588" 2
     , ppHidden          = white . wrap " " ""
@@ -84,7 +84,6 @@ main =    xmonad
     where
 	toggleStrutsKey :: XConfig Layout -> (KeyMask, KeySym)
 	toggleStrutsKey XConfig{ modMask = m } = (m .|. shiftMask, xK_Tab)
-
 
 userConfig = def {
 	  modMask 	= userMod

@@ -12,16 +12,16 @@ window:
   opacity: .75
 font:
   normal:
-    family: Liberation Mono
+    family: Fira Code
     style: Regular
   bold:
-    family: Liberation Mono
+    family: Fira Code
     style: Bold
   italic:
-    family: Liberation Mono
+    family: Fira Code
     style: Italic
   bold_italic:
-    family: Liberation Mono
+    family: Fira Code
     style: Bold Italic
   size: 10
 

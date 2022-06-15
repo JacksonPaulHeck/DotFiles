@@ -5,7 +5,7 @@
 trayer --edge top --align right --SetDockType true --SetPartialStrut true \
  --expand true --width 5 --tint 0x282828 --alpha 1 --transparent true --height 18 &
 
-feh --bg-fill --no-fehbg ~/.local/share/wallpapers/haskell-red-noise.png
+feh --bg-fill --no-fehbg ~/.local/share/wallpapers/haskell_yellow.jpeg
 
 if [ -x /usr/bin/nm-applet ] ; then
    nm-applet --sm-disable &
