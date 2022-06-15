@@ -16,6 +16,7 @@
 !.config/qtile/
 !.config/qtile/autostart.sh
 !.config/qtile/config.py
+!.config/starship.toml
 !.config/vim/
 !.config/vim/vimrc
 !.config/X11/
