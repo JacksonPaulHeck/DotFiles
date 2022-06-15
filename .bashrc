@@ -27,3 +27,5 @@ fi
 PS1='[\u@\h \W]\$ '
 
 alias config='/usr/bin/git --git-dir=/home/jpheckles/.cfg/ --work-tree=/home/jpheckles'
+
+eval "$(starship init bash)"
