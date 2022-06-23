@@ -1,13 +1,6 @@
 #!/bin/bash
-# qtile start
 
-trayer --edge top --align right --SetDockType true --SetPartialStrut true --tint 0x282828 --alpha 1 &
-
-feh --bg-fill --no-fehbg ~/.local/share/wallpapers/haskell-red-noise.png
-
-if [ -x /usr/bin/nm-applet ] ; then
-   nm-applet --sm-disable &
-fi
+feh --bg-fill --no-fehbg ~/.local/share/wallpapers/arch.jpg
 
 /usr/bin/dunst &
 /usr/bin/picom &

@@ -15,7 +15,7 @@ import System.Exit
 import Graphics.X11.ExtraTypes.XF86 
 
 userMod 	= mod4Mask
-userTerminal 	= "alacritty"
+userTerminal 	= "termonad"
 userBrowser 	= "brave-browser-nightly"
 userPrompt 	= "dmenu_run"
 
