@@ -1,0 +1,13 @@
+*
+
+!.gitignore
+!.bashrc
+!.config/
+!.config/neofetch/
+!.config/neofetch/config.conf
+!.config/termonad/
+!.config/termonad/termonad.hs
+!.config/xmobar/
+!.config/xmobar/xmobarrc
+!.config/xmonad/
+!.config/xmonad/xmonad.hs
