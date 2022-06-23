@@ -15,7 +15,7 @@ import System.Exit
 import Graphics.X11.ExtraTypes.XF86 
 
 userMod 	= mod4Mask
-userTerminal 	= "alacritty"
+userTerminal 	= "termonad"
 userBrowser 	= "firefox-bin"
 userPrompt 	= "dmenu_run"
 
@@ -47,7 +47,7 @@ userLayout = tiled ||| Mirror tiled ||| Full
 
 userXmobarPP :: PP
 userXmobarPP = def {
-      ppSep             = yellow "\xee\x82\xa0"
+      ppSep             = yellow "|"
     , ppTitleSanitize   = xmobarStrip
     , ppCurrent         = wrap " " "" . xmobarBorder "Top" "#458588" 2
     , ppHidden          = white . wrap " " ""
@@ -79,7 +79,7 @@ main::IO ()
 main =    xmonad 
 	. ewmhFullscreen 
 	. ewmh 
-	. withEasySB (statusBarProp "xmobar ~/.config/xmobar/xmobarrc" (pure userXmobarPP)) toggleStrutsKey 
+	. withEasySB (statusBarProp "xmobar" (pure userXmobarPP)) toggleStrutsKey 
 	$ userConfig
     where
 	toggleStrutsKey :: XConfig Layout -> (KeyMask, KeySym)
@@ -90,4 +90,5 @@ userConfig = def {
 	, terminal 	= userTerminal
 	, keys 		= userKeys
 	, layoutHook 	= spacingWithEdge 10 $ userLayout
+	, borderWidth 	= 0
     }

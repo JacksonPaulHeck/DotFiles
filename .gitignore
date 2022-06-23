@@ -17,6 +17,8 @@
 !.config/qtile/autostart.sh
 !.config/qtile/config.py
 !.config/starship.toml
+!.config/termonad/
+!.config/termonad/termonad.hs
 !.config/vim/
 !.config/vim/vimrc
 !.config/X11/

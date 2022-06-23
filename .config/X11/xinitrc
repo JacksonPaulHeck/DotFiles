@@ -3,14 +3,13 @@
 # exec dbus-launch --sh-syntax --exit-with-session dwm
 
 trayer --edge top --align right --SetDockType true --SetPartialStrut true \
- --expand true --width 5 --tint 0x282828 --alpha 1 --transparent true --height 18 &
+ --expand true --width 5 --tint 0x282828 --alpha 1 --transparent true --height 22 &
 
-feh --bg-fill --no-fehbg ~/.local/share/wallpapers/haskell_yellow.jpeg
+feh --bg-fill --no-fehbg ~/.local/share/wallpapers/gentoo.jpg
 
 if [ -x /usr/bin/nm-applet ] ; then
    nm-applet --sm-disable &
 fi
 
 dunst &
-
-exec xmonad
+exec dbus-launch xmonad
