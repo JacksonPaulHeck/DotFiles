@@ -1,5 +1,6 @@
 #
 # ~/.bashrc
+# By: Jackson Paul Heck
 #
 clear
 # If not running interactively, don't do anything
