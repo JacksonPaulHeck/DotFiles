@@ -1,8 +1,0 @@
-#!/bin/bash
-
-feh --bg-fill --no-fehbg ~/.local/share/wallpapers/arch.jpg
-
-/usr/bin/dunst &
-/usr/bin/picom &
-
-exec xmonad

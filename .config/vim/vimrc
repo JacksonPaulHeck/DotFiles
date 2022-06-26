@@ -48,6 +48,9 @@ call plug#begin()
     " code completion
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'tpope/vim-fugitive'
+
+    Plug 'rust-lang/rust.vim'
+
 call plug#end()
 
 colorscheme gruvbox
