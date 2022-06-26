@@ -1,0 +1,19 @@
+#!/bin/bash
+
+userresources=$XDG_CONFIG_HOME/X11/xresources
+usermodmap=$XDG_CONFIG_HOME/X11/xmodmap
+
+if [ -f "$userresources" ]; then
+    xrdb -merge "userresources"
+fi
+
+if [ -f "$usermodmap" ]; then
+    xmodmap "usermodmap"
+fi
+
+feh --bg-fill --no-fehbg ~/.local/share/wallpapers/arch.jpg
+
+/usr/bin/dunst &
+/usr/bin/picom &
+
+exec xmonad

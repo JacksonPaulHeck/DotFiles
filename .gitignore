@@ -21,7 +21,8 @@
 !.config/vim/
 !.config/vim/vimrc
 !.config/X11/
-!.config/X11/xinitrc
+!.config/X11/xinit/
+!.config/X11/xinit/xinitrc
 !.config/xmobar/
 !.config/xmobar/xmobarrc
 !.config/xmonad/
