@@ -5,4 +5,6 @@ feh --bg-fill --no-fehbg ~/.local/share/wallpapers/arch.jpg
 /usr/bin/dunst &
 /usr/bin/picom &
 
+xrandr --output DP-1 --mode 2560x1440 --rate 144 --output DP-2 --mode 1920x1080 --rotate right --left-of DP-1
+
 exec xmonad

@@ -18,6 +18,9 @@ export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GVIMINIT='let $MYGVIMRC="$XDG_CONFIG_HOME/vim/gvimrc" | source $MYGVIMRC'
 export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 export STACK_ROOT="$XDG_DATA_HOME"/stack
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc 
+export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
+
 
 if [ ! -f $XAUTHORITY ]
 then
