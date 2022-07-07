@@ -9,7 +9,7 @@ let g:netrw_dirhistmax = 0
 set runtimepath^=$XDG_CONFIG_HOME/vim
 set runtimepath+=$XDG_DATA_HOME/vim
 set runtimepath+=$XDG_CONFIG_HOME/vim/after
-
+set number
 set packpath^=$XDG_DATA_HOME/vim,$XDG_CONFIG_HOME/vim
 set packpath+=$XDG_CONFIG_HOME/vim/after,$XDG_DATA_HOME/vim/after
 
@@ -50,7 +50,7 @@ call plug#begin()
     Plug 'tpope/vim-fugitive'
 
     Plug 'rust-lang/rust.vim'
-
+    " Plug 'github/copilot.vim'
 call plug#end()
 
 colorscheme gruvbox
@@ -104,12 +104,6 @@ nnoremap <leader>p :terminal<CR>
 let NERDTreeWinSize = 50
 nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
-
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1

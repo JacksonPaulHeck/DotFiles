@@ -2,6 +2,7 @@ import XMonad
 import XMonad.Util.Loggers
 
 import XMonad.Layout.Spacing
+import XMonad.Layout.NoBorders
 
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.DynamicLog
@@ -38,7 +39,7 @@ userKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
         , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
 
-userLayout = tiled ||| Mirror tiled ||| Full
+userLayout = noBorders(tiled ||| Mirror tiled ||| Full)
     where
 	tiled 	 = Tall nmaster delta ratio
 	nmaster  = 1
@@ -90,5 +91,5 @@ userConfig = def {
 	  modMask 	= userMod
 	, terminal 	= userTerminal
 	, keys 		= userKeys
-	, layoutHook 	= spacingWithEdge 10 $ userLayout
+	, layoutHook 	= spacingWithEdge 0 $ userLayout
     }

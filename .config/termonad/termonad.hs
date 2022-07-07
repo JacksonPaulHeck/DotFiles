@@ -134,7 +134,7 @@ gruvboxLight =
 fontConf :: FontConfig
 fontConf =
   defaultFontConfig
-    { fontFamily = "Monospace"
+    { fontFamily = "SourceCodePro"
     , fontSize = FontSizePoints 12
     }
 

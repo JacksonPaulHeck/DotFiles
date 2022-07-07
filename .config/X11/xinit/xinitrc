@@ -11,9 +11,9 @@ if [ -f "$usermodmap" ]; then
     xmodmap "usermodmap"
 fi
 
-feh --bg-fill --no-fehbg ~/.local/share/wallpapers/arch.jpg
+feh --bg-fill --no-fehbg ~/.local/share/wallpapers/haskell_wallpapers/haskell_red_cyan.png
 
 /usr/bin/dunst &
-/usr/bin/picom &
+# /usr/bin/picom &
 
 exec xmonad

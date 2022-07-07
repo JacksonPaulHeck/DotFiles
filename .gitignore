@@ -18,6 +18,8 @@
 !.config/qtile/config.py
 !.config/termonad/
 !.config/termonad/termonad.hs
+!.config/tmux/
+!.config/tmux/tmux.conf
 !.config/vim/
 !.config/vim/vimrc
 !.config/X11/
